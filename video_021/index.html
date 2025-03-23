@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .yellow {
+        color: yellow;
+    }
+    .cred {
+        color: red;
+    }
+    .cpurple {
+        color: purple;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="yellow cred cpurple"></h1>
+
+     <h1 style="font-size: 2em; color: #333; margin-bottom: 0.5em;">
+    The Cascade Algorithm
+  </h1>
+
+  <p style="font-size: 1em; color: #555; line-height: 1.5; margin-bottom: 1em;">
+    CSS stands for Cascading StyleSheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It is the reason that the text of the button styled with the above CSS will be purple.
+  </p>
+
+  <p style="font-size: 1em; color: #555; line-height: 1.5; margin-bottom: 1em;">
+    Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+  </p>
+
+  <ol style="margin-bottom: 1em; color: #555; font-size: 1em;">
+    <li style="margin-bottom: 0.5em;">
+      <strong>Position and order of appearance:</strong> the order in which your CSS rules appear
+    </li>
+    <li style="margin-bottom: 0.5em;">
+      <strong>Specificity:</strong> an algorithm that determines which CSS selector has the strongest match
+    </li>
+    <li style="margin-bottom: 0.5em;">
+      <strong>Origin:</strong> the origin in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+    </li>
+    <li style="margin-bottom: 0.5em;">
+      <strong>Importance:</strong> some CSS rules are weighted more heavily than others, especially with the <code>!important</code> rule type
+    </li>
+  </ol>
+
+  <p style="font-size: 1em; color: #555; line-height: 1.5;">
+    Let’s look into all these one by one. <BR></BR>
+
+    Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector
+  </p>
+
+</body>
+</html>
