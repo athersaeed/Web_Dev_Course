@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* element selector */
+        /* div{
+            background-color: red;
+        } */
+        /* class selector */
+        .red {
+            background-color: red;
+        }
+
+        /* id selector */
+        #green {
+            background-color: green;
+        }
+
+        /* child selectors */
+        div>p {
+            background-color: yellow;
+        }
+
+        /* descendant selectors */
+        div p {
+            background-color: yellow;
+        }
+    /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    /*pseudo class selector*/
+        div:hover{
+            background-color: blue;
+        }
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: green;
+        }
+        p:active{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="red">
+        im a div
+    </div>
+    <div id="green">
+        im a also div
+        <article>
+            <p>i am a para inside div not a child bcuz not inside article (now a descendant)</p>
+        </article>
+    </div>
+    <a href="https://google.com">go to google</a>
+</body>
+
+</html>
