@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            border: 2px solid black;
+            margin: 3px;
+            padding: 3px;
+            height: 130px;
+            width: 60vw;
+        }
+        .box1{
+            background-color: red;
+            position: sticky;
+            top: 0px;
+            /* position: sticky; makes it stick to the top of the page when scrolling down, but only within its parent element. It will scroll with the page until it reaches the top of its parent, then it will stick there. kind of like a navbar */
+        }
+        .box2{
+            background-color: green;
+            /* position: relative;
+            top: 34px;
+            left: 56px; */
+            z-index: -1; /* this is a negative z-index, so it will be behind the other elements. z-index only works on positioned elements (absolute, relative, fixed, sticky) */
+            /* higher the zindex, the more on top the element is */
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /* position abs looks for nearest positioned anceestor, like checks box, then checks body, then html itself at 9:30 */
+        }
+        .box3{
+            background-color: blue;
+            /* position: fixed;
+            bottom: 0px;
+            right: 0px; */
+            /* yeah so fixed stays there without moving even when scrolling just stays at its position */
+        }
+        .box4{
+            background-color: yellow;
+        }
+        .parent{
+            /* transform, filter, perspective properties can also make an element appear as positioned */
+            border: 3px solid black;
+            padding: 34px;
+            margin: 34px;
+            position: absolute;
+            /* now i make .parent position abs making box 2 relative to this 11:30 */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div></div>
+</body>
+</html>
