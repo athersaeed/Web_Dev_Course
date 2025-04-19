@@ -1,0 +1,42 @@
+main{
+    background-color: aliceblue;
+    border: 2px solid darkgray;
+    border-radius: 8px;
+    height: 95vh;
+    width: 95vw
+
+}
+.top-half{
+    border: 2px solid lightgreen;
+    border-radius: 8px;
+    display: block;
+    margin: 5px;
+    height: 40vh;
+    width: 90vw;
+}
+.tags{
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+
+.description, .tags, .heading, .rm {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2px;
+    color: darkgray;
+}
+.heading{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 32px;
+    font-weight: 80;
+    color: rgb(61, 18, 18);
+}
+.rm{
+    color: blue;
+    border-radius: 10px;
+    border: 2px solid lightblue;
+    display: inline-block;
+    margin-left: 30vw;
+}
