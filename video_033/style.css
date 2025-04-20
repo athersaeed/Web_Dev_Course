@@ -1,0 +1,30 @@
+:root {
+    --bkgclr1: #EEEEEE;
+    --primclr1: #222831;
+    --secclr1: #393E46;
+    --popclr1: #00ADB5;
+}
+
+.nav:hover {
+  /* override your custom‑properties for only this element and its children */
+  --bkgclr1:  #F5EFFF;
+  --primclr1: #E5D9F2;
+  --secclr1:  #CDC1FF;
+  --popclr1:  #A294F9;
+}
+body {
+    background-color: var(--bkgclr);
+}
+
+.nav{
+    border: 2px solid var(--secclr1);
+    background-color: var(--primclr1);
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 8px;
+    color: var(--popclr1);
+    font-weight: bold;
+}
