@@ -1,0 +1,110 @@
+:root {
+    --bkgclr: #EEF1DA;
+    --popclr: #ADB2D4;
+    --primclr: #C7D9DD;
+    --secclr: #D5E5D5;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+header {
+    background-color: var(--bkgclr);
+    padding: 10px;
+    top: 0px;
+    position: sticky;
+
+}
+
+.bg {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--secclr);
+    max-width: 100%;
+}
+
+.box {
+    display: inline-block;
+    padding: 60px;
+    margin: 55px;
+    margin-top: 175px;
+
+    height: 30vh;
+    width: 30vw;
+
+
+}
+
+.box:nth-child(1) {
+    background-color: var(--popclr);
+}
+
+.box:nth-child(2) {
+    background-color: var(--popclr);
+}
+
+.title {
+    border: 2px solid var(--primclr);
+    padding: 10px;
+    padding-top: 8vh;
+    margin: 20px;
+    margin-left: 30vw;
+    text-align: center;
+    display: inline-block;
+    width: 40vw;
+    height: 10vh;
+    border-radius: 30px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+}
+
+footer {
+    background-color: var(--bkgclr);
+    padding: 10px;
+    top: 0px;
+    position: sticky;
+}
+
+footer nav {
+    display: inline-block;
+}
+
+footer nav ul {
+    padding-right: 20vw;
+}
+
+footer nav ul li {
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.icon{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--popclr);
+    height: 40px;
+    width: 40px;
+    z-index: 100;
+    border-radius: 40px;
+}
