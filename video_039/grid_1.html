@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: 120px 100px;
+            grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 1fr 1fr; fraction columns */
+            grid-template-columns: 1fr 2fr 1fr;
+            height: 100vh;
+            row-gap: 10px;
+            column-gap: 10px;
+            justify-items: center;
+            align-items: center;
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-columns: repeat(4,minmax(100px, 1fr));
+            /* justify items and align items are used inside cells to center the items inside cells
+            whereas justify content and align content are used to center the grid itself */
+            /* and place content affects justify content and align content */
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+        .item_4{
+            /* grid-row: 1/2; */
+            /* or you can do */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+            /* grid-column: 1/2; */
+            justify-self: start;
+            align-self: flex-start;
+        }
+        .item_1{
+            /* grid-row: 1/2;
+            grid-column: 1/2; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item_1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item_4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
