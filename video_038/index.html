@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 1000px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            /* flex start, flex end, space around, space between */
+            align-items: center;
+            /* flex start, flex end, */
+
+            /* flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row;
+            flex-direction: row-reverse; */
+
+            /* justify-content looks at the main axis (flex-direction: row makes main axis x axis and flex-direction: column makes main axis y axis) */
+            /* align-items looks at the cross axis (flex-direction: row makes cross axis y axis and flex-direction: column makes cross axis x axis) */
+
+            gap: 10px;
+            row-gap: 10px;
+        }
+        .item{
+            /* flex-grow: 1; */
+            height: 12px;
+            width: 12px;
+            background-color: blueviolet;
+            padding: 2px;
+            /* margin: 2px; */
+            border: 1px solid black;
+        }
+        .order-1{
+            order: 1; /* the higher the order the later it will come*/
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+            align-self: flex-start;
+            /* alignself aligns the item sorta overrides the alignitems */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item order-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+    </div>
+</body>
+</html>
