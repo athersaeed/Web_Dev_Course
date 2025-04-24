@@ -1,0 +1,38 @@
+.container {
+    width: 800px;
+    height: 600px;
+    background-color: blue;
+    position: relative;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* animation: bounce 2s cubic-bezier(0, 0, 0.01, 1.03) 0s infinite alternate-reverse;
+    animation: move 10s linear 0s infinite alternate-reverse ; */
+    animation: bounce 2s cubic-bezier(0, 0, 0.01, 1.03) infinite alternate;
+}
+
+.wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: move 10s linear infinite alternate;
+}
+
+
+
+@keyframes bounce {
+  from { transform: translateY(0);      }
+  to   { transform: translateY(-400px);  }
+}
+@keyframes move {
+  from { transform: translateX(0);      }
+  to   { transform: translateX(760px);   }
+}
