@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            margin: 34px;
+            padding: 34px;
+            height: 34px;
+            width: 34px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+
+    <!-- <script>
+        function randomHexColor() {
+            let val1 = Math.floor(0+ Math.random()*255)              // ensure 6 digits
+            let val2 = Math.floor(0+ Math.random()*255)              // ensure 6 digits
+            let val3 = Math.floor(0+ Math.random()*255)
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+        let e = document.body.firstElementChild.children
+
+        Array.from(e).forEach(element => {
+            element.style.backgroundColor = randomHexColor()
+            element.style.color = randomHexColor()
+        });
+
+    </script> -->
+
+    <script>
+        function randomHexColor() {
+      return '#' +
+        Math.floor(Math.random() * 0xFFFFFF)
+          .toString(16)
+          .padStart(6, '0');
+    }
+
+    let e = document.body.firstElementChild.children
+
+    Array.from(e).forEach(ele => {
+        ele.style.backgroundColor = randomHexColor()
+        ele.style.color = randomHexColor()
+        console.log(ele)
+    });
+
+
+    </script>
+
+</body>
+
+</html>
