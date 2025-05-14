@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hey I am a box</div>
+        <div class="box" style="display: flex;">Hey I am a box</div>
+    </div>
+</body>
+
+    <script>
+
+        document.querySelector(".container").innerHTML
+        document.querySelector(".container").innerText
+        document.querySelector(".container").outerHTML
+        document.querySelector(".container").tagName
+        document.querySelector(".container").nodeName
+        document.querySelector(".container").textContent
+        document.querySelector(".container").hidden = false
+        document.querySelector(".box").innerHTML = "Hey I am Ather"
+        document.querySelector(".box").hasAttribute("style")
+        document.querySelector(".box").getAttribute("style")
+        document.querySelector(".box").setAttribute("style","display:inline")
+        document.querySelector(".box").setAttribute("style","background-color: blue")
+        // document.querySelector(".box").removeAttribute("style")
+        // document.querySelector(".box").style.removeProperty("display")
+        document.querySelector(".box").setAttribute("data-createdBy", "ather")
+        document.querySelector(".box").setAttribute("data-conceptBy", "ather")
+        document.querySelector(".box").dataset
+
+        let div = document.createElement("div")
+        div.innerHTML = "i have been inserted <b>by ather</b>"
+        div.setAttribute("class", "created")
+        // document.querySelector(".container").append(div)
+        document.querySelector(".container").before(div)
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterbegin", "<b>afterbegin</b>")
+        cont.insertAdjacentHTML("afterend", "<b>afterend</b>")
+        cont.insertAdjacentHTML("beforebegin", "<b>beforebegin</b>")
+        cont.insertAdjacentHTML("beforeend", "<b>beforeend</b>")
+
+        document.querySelector(".box").remove()
+
+        document.querySelector(".container").classList
+        document.querySelector(".container").classList.add("ather")
+        document.querySelector(".container").classList.remove("ather")
+        document.querySelector(".container").className
+
+
+        document.querySelector(".container").classList.add("bg-red")
+        document.querySelector(".bg-red").style.backgroundColor = "red"
+        // document.querySelector(".container").classList.toggle("bg-red")
+
+    </script>
+
+</html>
