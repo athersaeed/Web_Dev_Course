@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child,
+        .childcontainer,
+        .container {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+        }
+
+        .childcontainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childcontainer">
+            <div class="child">
+                <div class="text"><b>I MISS THE RAGE</b></div>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation
+            alert("child was clicked")
+            document.querySelector(".child").innerHTML = "child, childcontainer, contaier was clicked"
+        })
+
+        document.querySelector(".childcontainer").addEventListener("click", () => {
+            alert("childcontainer was clicked")
+            document.querySelector(".child").innerHTML = "childcontainer, contaier was clicked"
+        })
+
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("container was clicked")
+            document.querySelector(".child").innerHTML = "only contaier was clicked"
+        })
+
+
+        function randomHexColor() {
+            let val1 = Math.floor(0 + Math.random() * 255)              // ensure 6 digits
+            let val2 = Math.floor(0 + Math.random() * 255)              // ensure 6 digits
+            let val3 = Math.floor(0 + Math.random() * 255)
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+        
+
+
+        setInterval(() => {
+            document.querySelector(".child").style.background = randomHexColor()
+        }, 300
+        );
+        setInterval(() => {
+            document.querySelector(".childcontainer").style.background = randomHexColor()
+        }, 300
+        );
+        setInterval(() => {
+            document.querySelector(".container").style.background = randomHexColor()
+        }, 300
+        );
+        setInterval(() => {
+            document.querySelector(".text").style.color = randomHexColor()
+        }, 300
+        );
+        
+
+    </script>
+</body>
+
+</html>
