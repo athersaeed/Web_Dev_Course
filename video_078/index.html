@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Hacking</title>
+    <style>
+        body {
+            background-color: black;
+            border: 8px solid greenyellow;
+            height: 96vh;
+            width: 98vw;
+        }
+
+        .text span {
+            color: greenyellow;
+        }
+
+        .text {
+            margin: 10px;
+        }
+
+        :root {
+            --step: 900ms;
+        }
+
+        .dot {
+            display: inline-block;
+            min-width: 3ch;
+            /* prevents layout shift */
+            vertical-align: baseline;
+        }
+
+        .dot::after {
+            content: "";
+            animation: ellipsis calc(var(--step) * 4) steps(1, end) infinite;
+        }
+
+        @keyframes ellipsis {
+            0% {
+                content: "";
+            }
+
+            25% {
+                content: ".";
+            }
+
+            50% {
+                content: "..";
+            }
+
+            75% {
+                content: "...";
+            }
+
+            100% {
+                content: "";
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
